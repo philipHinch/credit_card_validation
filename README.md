@@ -2,7 +2,9 @@
 
 Customise and create your own credit card. 
 
-## Technologies used:
+![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
+
+### Technologies used:
 
 - React
 - Css
