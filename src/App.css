@@ -21,9 +21,12 @@ body{
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: scroll;
+    overflow-x: hidden; */
+    /* overflow: hidden; */
+    overflow-x: hidden;
     background: url('./assets/images/fancy-pants.jpg');
     background-color: #303030;
 opacity: 1;
@@ -38,13 +41,62 @@ background-position: 0 0, 0 0, 5px 9px, 5px 9px, 0 0, 5px 9px;
     justify-content: center;
     margin-top: 200px;
     width: 100vw;
-    height: 100vh;
 }
 .Tilte{
     height: 250px;
     width: 250px;
 }
+/* form */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    width: 80%;
+    height: 300px;
+    max-height: 500px;
+    max-width: var(--large-card-width);
+    padding: 10px;
+    margin-bottom: 100px;
+    background-color: rgba(217, 241, 255,0.9);
+}
+.nameInputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+#name{
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: hsl(0, 0%, 80%);
+    min-height: 38px;
+    outline: none;
+    padding: 2px 8px;
+    font-size: inherit;
+}
 /* card */
+.flipContainer{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: white;
+    top: 10%;
+    left: 10%;
+}
+.flipIcon{
+    font-size:3rem ;
+    animation: spinner 6s infinite linear;
+}
+.flipText{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-left: 15px;
+}
 .card {
     width: var(--large-card-width);
     height: var(--large-card-height);
@@ -344,4 +396,9 @@ background-position: 0 0, 0 0, 5px 9px, 5px 9px, 0 0, 5px 9px;
 .backText p{
     font-size: 0.5rem;
 }
+}
+@keyframes spinner {
+    100%{
+        transform: rotate(360deg);
+    }
 }
