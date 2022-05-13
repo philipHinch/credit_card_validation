@@ -3,6 +3,9 @@ import './App.css';
 import Tilt from 'react-tilt'
 //components
 import Form from './components/Form';
+//context
+import { useContext } from 'react';
+import { Context } from './context/Context';
 //icons
 import { Icon } from '@iconify/react';
 //images
@@ -13,6 +16,10 @@ import fancy from './assets/images/fancy-pants.jpg'
 import { useState } from 'react';
 
 function App() {
+
+  const context = useContext(Context)
+
+  const { dispatch, name, title, font_theme, back_color } = context
 
   const [flipped, setFlipped] = useState(false)
 
@@ -57,7 +64,7 @@ function App() {
                   </div>
                 </div>
                 <div className="nameContainer">
-                  <p className="digits nameDigits">john doe</p>
+                  <p className="digits nameDigits">{name ? name : 'mr john doe'}</p>
                 </div>
                 <div className="visaIconContainer">
                   <Icon className='visaIcon' icon="simple-icons:visa" />
