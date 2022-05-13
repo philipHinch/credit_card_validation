@@ -3,6 +3,7 @@ import './App.css';
 //packages
 import Tilt from 'react-tilt'
 //components
+import Header from './components/Header';
 import Form from './components/Form';
 //context
 import { useContext } from 'react';
@@ -79,6 +80,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <div className="container">
         <div className="flipContainer">
           <Icon className="flipIcon" icon="akar-icons:arrow-clockwise" />

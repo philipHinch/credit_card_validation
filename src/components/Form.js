@@ -52,8 +52,6 @@ const Form = () => {
 
     const context = useContext(Context)
 
-    console.log(context);
-
     const { dispatch, name, title, front_theme, back_color } = context
 
     const handleChange = (e) => {

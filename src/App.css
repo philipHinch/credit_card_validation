@@ -41,32 +41,42 @@
 body{
     font-family: var(--roboto);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     /* overflow: scroll;
     overflow-x: hidden; */
     /* overflow: hidden; */
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     background: url('./assets/images/fancy-pants.jpg');
     background-color: #303030;
-opacity: 1;
-background-color: #161616;
-background-image:  linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(30deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(150deg, #000000 12%, transparent 12.5%, transparent 87%, #000000 87.5%, #000000), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077), linear-gradient(60deg, #00000077 25%, transparent 25.5%, transparent 75%, #00000077 75%, #00000077);
-background-size: 10px 18px;
-background-position: 0 0, 0 0, 5px 9px, 5px 9px, 0 0, 5px 9px;
+    opacity: 1;
+
+    background-color: #000000;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #212121 12%, transparent 12.5%, transparent 87%, #212121 87.5%, #212121), linear-gradient(150deg, #212121 12%, transparent 12.5%, transparent 87%, #212121 87.5%, #212121), linear-gradient(30deg, #212121 12%, transparent 12.5%, transparent 87%, #212121 87.5%, #212121), linear-gradient(150deg, #212121 12%, transparent 12.5%, transparent 87%, #212121 87.5%, #212121), linear-gradient(60deg, #21212177 25%, transparent 25.5%, transparent 75%, #21212177 75%, #21212177), linear-gradient(60deg, #21212177 25%, transparent 25.5%, transparent 75%, #21212177 75%, #21212177);
+    background-size: 22px 39px;
+    background-position: 0 0, 0 0, 11px 19px, 11px 19px, 0 0, 11px 19px;
 }
 .container{
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    margin-top: 200px;
-    width: 100vw;
+    margin-top: 80px;
+    width: 100%;
 }
 .Tilte{
     height: 250px;
     width: 250px;
+}
+/* header */
+.mainTitle{
+    color: #f6f6f6;
+    font-weight: 700;
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 20px;
 }
 /* form */
 form{
@@ -75,31 +85,33 @@ form{
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     border-radius: 20px;
     width: 80%;
     height: 400px;
     max-height: 500px;
     max-width: var(--large-card-width);
     padding: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 300px;
     background-color: transparent;
     background-color: rgb(61, 61, 61);
     border: 1px solid white;
 }
 form label{
+    display: block;
     color: white;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 .titleContainer,.nameInputContainer,.frontBackgroundContainer,.backBackgroundContainer{
     width: 100%;
-    min-width: 300px;
+    min-width: 250px;
 }
-.nameInputContainer{
+.nameInputContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 auto;
 }
 #name{
     border-radius: 4px;
@@ -111,7 +123,6 @@ form label{
     padding: 2px 8px;
     font-size: inherit;
     letter-spacing: 2px;
-    width: 200px;
     width: 100%;
 }
 #name:focus{
@@ -347,6 +358,9 @@ form label{
     font-size: 1rem;
 }
 @media(max-width:700px){
+    .flipContainer{
+        display: none;
+    }
 /* card */
 .card {
     float: none;
@@ -432,6 +446,16 @@ form label{
 .backText p{
     font-size: 0.5rem;
 }
+}
+@media(max-width:500px){
+    .mainTitle{
+        font-size: 2rem;
+        flex-wrap: wrap;
+    }
+    form{
+        width: 90%;
+        margin: 50px auto;
+    }
 }
 @keyframes spinner {
     100%{
