@@ -7,5 +7,6 @@ Customise and create your own credit card.
 ### Technologies used:
 
 - React
-- Css
-- Css Animations
+- useContext & useReducer (for state management)
+- CSS
+- CSS Animations
