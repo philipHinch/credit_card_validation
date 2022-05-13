@@ -1,6 +1,8 @@
-# Credit Card Validation
+# Credit Card Designer
 
-Customise and create your own credit card. 
+Customise and create your own credit card. Choose the card theme from a range of patterns and decide which colour you want for the back.
+
+I used React & useContext with useReducer to manage the state and CSS animations for the 3D flip effect. 
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
 
@@ -14,8 +16,6 @@ Customise and create your own credit card.
 [View Project](https://credit-card-creator.vercel.app/)
 
 ![This is an image](https://raw.githubusercontent.com/philipHinch/underline/main/underline.png)
-
-**Previews:**
 
 Desktop
 ![This is an image](https://github.com/philipHinch/credit_card_validation/blob/main/src/assets/previews/credit_card_preview_large.png?raw=true)
