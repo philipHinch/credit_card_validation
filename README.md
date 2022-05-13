@@ -1,4 +1,4 @@
-# Credit Card Designer
+# 3D Credit Card Designer
 
 Customise and create your own credit card. Choose the card theme from a range of patterns and decide which colour you want for the back.
 
