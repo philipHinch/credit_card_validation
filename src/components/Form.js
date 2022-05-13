@@ -5,24 +5,29 @@ import { useContext } from 'react';
 import { Context } from '../context/Context';
 //react select options
 const titleOptions = [
+    { value: '', label: 'None', category: 'title' },
     { value: 'mr', label: 'Mr', category: 'title' },
     { value: 'mrs', label: 'Mrs', category: 'title' },
-    { value: 'miss', label: 'Miss', category: 'title' },
-    { value: '', label: 'None', category: 'title' }
+    { value: 'miss', label: 'Miss', category: 'title' }
 
 ];
 //react select options
 const themeOptions = [
-    { value: 'ripples', label: 'Ripples', category: 'theme' },
     { value: 'fancy', label: 'Fancy', category: 'theme' },
-    { value: 'triangles', label: 'Triangles', category: 'theme' }
+    { value: 'ripples', label: 'Ripples', category: 'theme' },
+    { value: 'squares', label: 'Squares', category: 'theme' },
+    { value: 'triangles', label: 'Triangles', category: 'theme' },
+    { value: 'zigZag', label: 'Zig-Zag', category: 'theme' },
 ]
 //react select options
 const backgroundOptions = [
     { value: 'blue', label: 'Blue', category: 'background' },
-    { value: 'black', label: 'Black', category: 'background' },
+    { value: 'black', label: 'Dark', category: 'background' },
+    { value: 'green', label: 'Green', category: 'background' },
     { value: 'pink', label: 'Pink', category: 'background' },
-    { value: 'red', label: 'Red', category: 'background' }
+    { value: 'red', label: 'Red', category: 'background' },
+    { value: 'yellow', label: 'Yellow', category: 'background' },
+    { value: 'white', label: 'White', category: 'background' },
 ]
 //custom react select styles
 const customStyles = {
@@ -47,10 +52,18 @@ const Form = () => {
 
     const context = useContext(Context)
 
-    const { dispatch, name, title, font_theme, back_color } = context
+    console.log(context);
+
+    const { dispatch, name, title, front_theme, back_color } = context
 
     const handleChange = (e) => {
-        console.log(e);
+        if (e.category === 'title') {
+            dispatch({ type: 'TITLE', payload: e.value })
+        } else if (e.category === 'theme') {
+            dispatch({ type: 'THEME', payload: e.value })
+        } else if (e.category === 'background') {
+            dispatch({ type: 'BACKGROUND', payload: e.value })
+        }
     }
 
     const handelNameChange = (e) => {
@@ -61,11 +74,11 @@ const Form = () => {
         <form>
             <div className="titleContainer">
                 <label htmlFor="title">Title:</label>
-                <Select options={titleOptions} defaultValue={{ value: 'mr', label: 'Mr' }} styles={customStyles} onChange={handleChange} />
+                <Select options={titleOptions} defaultValue={{ value: '', label: 'None' }} styles={customStyles} onChange={handleChange} />
             </div>
             <div className="nameInputContainer">
                 <label htmlFor="name">Name:</label>
-                <input type="text" name="name" id="name" max='20' onChange={handelNameChange} />
+                <input type="text" name="name" id="name" maxLength='20' onChange={handelNameChange} />
             </div>
             <div className="frontBackgroundContainer">
                 <label htmlFor="frontBackground">Front Theme:</label>

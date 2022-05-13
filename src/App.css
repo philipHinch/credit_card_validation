@@ -16,6 +16,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* back card colors */
+.blueColor{
+    background-color: #0d293a;
+}
+.pinkColor{
+    background-color: rgb(207, 102, 207);
+}
+.redColor{
+    background-color: rgb(134, 3, 29);
+}
+.blackColor{
+    background-color: #303030;
+}
+.yellowColor{
+    background-color: rgb(230, 196, 0);
+}
+.whiteColor{
+    background-color: #e6e6e6;
+}
+.greenColor{
+    background-color: rgb(45, 120, 45);
+}
 body{
     font-family: var(--roboto);
     height: 100vh;
@@ -172,10 +194,6 @@ form label{
     overflow: hidden;
     color: white;
     transform: rotateY( 180deg );
-    background-color: rgba(201, 201, 201, 0.626);
-    background: #303030;
-    background-color:rgb(0, 58, 76) ;
-    background-color: #0d293a;
 }
   /* inner front card */
 .logoContainer{
@@ -261,13 +279,15 @@ form label{
     font-weight: bold;
     text-transform: uppercase;
 }
-.validationDigits,.nameDigits{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-}
 .nameContainer{
+    display: flex;
+    align-items: center;
     width: 100%;
     padding-left: 40px;
+}
+.validationDigits,.nameDigits,.titleDigits{
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 /* inner back card */
 .magneticStrip{
@@ -374,7 +394,7 @@ form label{
 .validLeft small{
     font-size: 0.5rem;
 }
-.validationDigits,.nameDigits{
+.validationDigits,.nameDigits,.titleDigits{
     font-size: 0.75rem;
 }
 .nameContainer{
